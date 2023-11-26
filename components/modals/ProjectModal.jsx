@@ -4,22 +4,31 @@ import { useTranslation } from "react-i18next";
 import ModalBase from "/components/Modals//ModalBase";
 import { useIcons } from "/utils/context/IconsContext";
 
-function removeHttps(url) {
-  return url.replace("https://", "");
-}
-
 export default function ProjectModal({
   project,
   isOpenModal,
   setIsOpenModal,
   currentLanguage,
 }) {
-  console.log("currentLanguage", currentLanguage);
+  function changeUrlPreview(url) {
+    if (url) {
+      return url.replace("https://", "");
+    }
+    return "";
+  }
+
+  function changeUrlGithub(url) {
+    if (url) {
+      return url.replace("https://github.com/", "");
+    }
+    return "";
+  }
+
   const ReactIcons = useIcons();
   const SlClose = ReactIcons["SlClose"];
   const { i18n } = useTranslation("pages");
 
-  const tableItems = [
+  const tableInfosItems = [
     {
       icon: "BsPersonCircle",
       title: "Client :",
@@ -36,19 +45,22 @@ export default function ProjectModal({
       value: project.date,
     },
     { icon: "IoIosCode", title: "Outils :", value: project.languages },
-    // project.repository && {
-    //   icon: "FaGithub",
-    //   title: "Aperçu :",
-    //   value: project.repository,
-    // },
-    // project.url && {
-    //   icon: "GrOverview",
-    //   title: "Aperçu :",
-    //   value: removeHttps(project.url),
-    // },
   ];
 
-  const table = tableItems.map((item) => {
+  const tableLinksItems = [
+    {
+      icon: "FaGithub",
+      title: "Repository :",
+      value: changeUrlGithub(project.repository),
+    },
+    {
+      icon: "GrOverview",
+      title: "Aperçu :",
+      value: changeUrlPreview(project.url),
+    },
+  ];
+
+  const tableInfos = tableInfosItems.map((item) => {
     const IconComponent = ReactIcons[item.icon];
     return (
       <li key={item.title} className="flex items-center gap-x-3">
@@ -58,6 +70,19 @@ export default function ProjectModal({
           <span className="font-semibold">{item.value}</span>
         </span>
       </li>
+    );
+  });
+
+  const tableLinks = tableLinksItems.map((item) => {
+    const IconComponent = ReactIcons[item.icon];
+    return (
+      <Link href key={item.title} className="flex items-center gap-x-3">
+        <IconComponent className="text-lg font-semibold text-slate-900 dark:text-slate-300" />
+        <span className="flex font-medium">
+          {item.title} &nbsp;
+          <span className="font-semibold">{item.value}</span>
+        </span>
+      </Link>
     );
   });
 
@@ -79,7 +104,9 @@ export default function ProjectModal({
           </p>
         </div>
         <ul className="grid grid-cols-2 gap-2 text-lg text-slate-900 dark:text-slate-300">
-          {table}
+          {tableInfos}
+          {tableLinks}
+          {/* {project.url && { tableLinks }} */}
         </ul>
         <div>
           <p className="text-slate-900 dark:text-slate-300">
