@@ -11,10 +11,15 @@ export default function CategoriesBar() {
 
   const toggleCategory = (category) => {
     setSelectedCategories((prevSelectedCategories) => {
-      if (prevSelectedCategories.includes(category)) {
-        return prevSelectedCategories.filter((c) => c !== category);
+      if (
+        prevSelectedCategories.length === 1 &&
+        prevSelectedCategories[0] === category
+      ) {
+        // Si la catégorie est déjà la seule catégorie sélectionnée, désélectionnez-la
+        return [];
       } else {
-        return [...prevSelectedCategories, category];
+        // Sinon, activez/désactivez uniquement la catégorie actuelle
+        return [category];
       }
     });
   };

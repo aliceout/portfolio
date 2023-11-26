@@ -14,7 +14,7 @@ export default function ModalBase({ children, isOpenModal, setIsOpenModal }) {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 transition-opacity bg-opacity-75 bg-slate-900" />
+          <div className="fixed inset-0 transition-opacity bg-opacity-75 bg-slate-900 dark:bg-black/70" />
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
@@ -28,7 +28,7 @@ export default function ModalBase({ children, isOpenModal, setIsOpenModal }) {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative px-4 pt-5 pb-4 overflow-visible text-left transition-all transform bg-white shadow-xl rounded-xl sm:my-8 sm:w-full sm:max-w-4xl sm:p-6 ">
+              <Dialog.Panel className="relative px-4 pt-5 pb-4 overflow-visible text-left transition-all transform bg-white shadow-xl dark:bg-slate-900 rounded-xl sm:my-8 sm:w-full sm:max-w-4xl sm:p-6 ">
                 {children}
               </Dialog.Panel>
             </Transition.Child>

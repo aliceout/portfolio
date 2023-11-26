@@ -11,6 +11,7 @@ import * as SiIcons from "react-icons/si";
 import * as CiIcones from "react-icons/ci";
 import * as PiIcons from "react-icons/pi";
 import * as RiIcons from "react-icons/ri";
+import * as BIIcons from "react-icons/bi";
 
 const IconsContext = createContext();
 
@@ -31,6 +32,7 @@ export function IconsProvider({ children }) {
     ...CiIcones,
     ...PiIcons,
     ...RiIcons,
+    ...BIIcons,
   };
 
   return (
