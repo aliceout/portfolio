@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 import ModalBase from "/components/Modals//ModalBase";
 import { useIcons } from "/utils/context/IconsContext";
 
-// function removeHttps(url) {
-//   return url.replace("https://", "");
-// }
+function removeHttps(url) {
+  return url.replace("https://", "");
+}
 
 export default function ProjectModal({
   project,
@@ -36,7 +36,16 @@ export default function ProjectModal({
       value: project.date,
     },
     { icon: "IoIosCode", title: "Outils :", value: project.languages },
-    // { icon: "GrOverview", title: "Aperçu :", value: removeHttps(project.url) },
+    // project.repository && {
+    //   icon: "FaGithub",
+    //   title: "Aperçu :",
+    //   value: project.repository,
+    // },
+    // project.url && {
+    //   icon: "GrOverview",
+    //   title: "Aperçu :",
+    //   value: removeHttps(project.url),
+    // },
   ];
 
   const table = tableItems.map((item) => {
