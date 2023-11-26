@@ -24,14 +24,14 @@ export default function Header() {
             <DarkModeBtn />
             <LanguagesBtn />
           </div>
-          <Link
+          {/* <Link
             href="https://aliceout.work"
             target="_blank"
             className="flex flex-row items-center justify-between px-4 py-2 hover:bg-primary/20 dark:bg-slate-900/80 gap-x-4 rounded-2xl bg-white/80 dark:hover:bg-secondary/40 group text-slate-600 hover:text-slate-700 dark:text-slate-300 ring-gray-200 ring-1 hover:ring-primary/40 dark:ring-gray-600 dark:hover:ring-secondary/50"
           >
             <p className="text-sm">Consulter le CV</p>
             <BsArrowRight className="text-xs" />
-          </Link>
+          </Link> */}
           <GiHamburgerMenu
             className="text-gray-400 md:hidden"
             onClick={() => setHamburgerMenuIsOpen(!hamburgerMenuIsOpen)}

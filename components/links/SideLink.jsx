@@ -15,7 +15,7 @@ export default function SideLink() {
         key={link.href}
         href={link.href}
         target="_blank"
-        className="flex flex-row items-center px-8 py-2 text-sm font-bold transition duration-300 bg-white rounded-lg shadow-sm dark:bg-gray-800/90 text-slate-900 dark:text-gray-100 ring-1 ring-gray-100 dark:ring-slate-800 hover:bg-gray-50/80 gap-x-2 dark:hover:bg-gray-700/90"
+        className="flex flex-row items-center px-6 py-2 text-sm font-bold transition duration-300 bg-white rounded-lg shadow-sm md:px-4 lg:px-8 dark:bg-gray-800/90 text-slate-900 dark:text-gray-100 ring-1 ring-gray-100 dark:ring-slate-800 hover:bg-gray-50/80 gap-x-2 dark:hover:bg-gray-700/90"
       >
         <IconComponent
           className="group-hover:text-white"
@@ -30,5 +30,5 @@ export default function SideLink() {
     );
   });
 
-  return <div className="flex flex-row justify-center ml-6 gap-x-3 ">{linksList}</div>;
+  return <div className="flex flex-row justify-center gap-3 ml-6 ">{linksList}</div>;
 }

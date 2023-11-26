@@ -14,5 +14,13 @@ module.exports = [
 
     href: "https://linkedin.com/in/aliceOsdel",
   },
+  {
+    name: "CV",
+    icon: "BsPersonVcardFill", // Attention de pas laisser d'espace après le nom de l'icone
+    lightColor: "#da5556",
+    darkColor: "#69bfc8",
+
+    href: "https://aliceout.work",
+  },
 ];
 

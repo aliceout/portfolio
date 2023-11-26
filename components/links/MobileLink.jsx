@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 import { useIcons } from "/utils/context/IconsContext";
-import linksData from "/data/navLinks";
+import linksData from "/data/externalsLinks";
 import { useGlobalContext } from "/utils/context/GlobalContext";
 
 export default function MobileLink() {
@@ -19,11 +19,11 @@ export default function MobileLink() {
         key={item.name}
         href={item.href}
         onClick={() => setHamburgerMenuIsOpen(false)}
-        className="flex flex-row items-center justify-start gap-4 p-3 duration-300 rounded-lg hover:text-slate-500 dark:text-gray-300 dark:hover:bg-dark-gradient hover:bg-light-gradient"
+        className="flex flex-row items-center justify-start gap-4 p-3 duration-300 rounded-lg dark:text-gray-300 "
       >
         <IconComponent />
         <p className="text-sm font-semibold test-slate-600">
-          {t(item.nameTransKey, { ns: "navbar" })}
+          {item.name}
         </p>
       </Link>
     );

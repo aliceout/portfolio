@@ -2,7 +2,7 @@ module.exports = [
   {
     title: "WebApp",
     categories: ["WebApp"],
-    date: "2023",
+    date: 2023,
     client: [
       {
         fr: "Association Watizat",
@@ -11,7 +11,7 @@ module.exports = [
         en: "Watizat association",
       },
     ],
-    languages: "React, Redux, Tailwind",
+    languages: ["React", "Redux", "Tailwind"],
     url: "https://watizat.app",
     repository: "https://github.com/Watizat/web_app",
     description: [
@@ -27,7 +27,7 @@ module.exports = [
   {
     title: "Migrappi",
     categories: ["WebApp"],
-    date: "2019",
+    date: 2019,
     client: [
       {
         fr: "ONG Caritas Maroc",
@@ -36,7 +36,7 @@ module.exports = [
         en: "Caritas Maroc NGO",
       },
     ],
-    languages: "PHP, Bootstrap",
+    languages: ["PHP", "Bootstrap"],
     url: "https://migrappi.aliceout.dev",
     repository: "https://github.com/aliceout/Migrappi-frontend",
     description: [
@@ -52,7 +52,7 @@ module.exports = [
   {
     title: "My resume",
     categories: ["WebApp"],
-    date: "2023",
+    date: 2023,
     client: [
       {
         fr: "Projet personnel",
@@ -61,7 +61,7 @@ module.exports = [
         en: "Personal project",
       },
     ],
-    languages: "React, NextJS, Tailwind ",
+    languages: ["React", "NextJS", "Tailwind"],
     url: "https://aliceout.work",
     repository: "https://github.com/aliceout/Work-resume",
     description: [
@@ -77,7 +77,7 @@ module.exports = [
   {
     title: "Currencies converter",
     categories: ["WebApp"],
-    date: "2023",
+    date: 2023,
     client: [
       {
         fr: "Projet personnel",
@@ -86,7 +86,7 @@ module.exports = [
         en: "Personal project",
       },
     ],
-    languages: "Js Vanilla",
+    languages: ["JavaScript"],
     url: "https://currencies.aliceout.dev",
     repository: "https://github.com/aliceout/Currencies-converter",
     description: [
@@ -102,7 +102,7 @@ module.exports = [
   {
     title: "Todolist",
     categories: ["WebApp"],
-    date: "2023 - en cours",
+    date: 2023,
     client: [
       {
         fr: "Projet personnel",
@@ -111,7 +111,7 @@ module.exports = [
         en: "Personal project",
       },
     ],
-    languages: "React, Tailwind",
+    languages: ["React", "Tailwind"],
     url: "https://todolist.aliceout.dev",
     repository: "https://github.com/aliceout/TodoList",
     description: [
@@ -123,5 +123,120 @@ module.exports = [
       },
     ],
     picture: "/images/projects/todolist.png",
+  },
+  {
+    title: "Livret Migrant'Scène",
+    categories: ["Graphisme"],
+    date: 2017,
+    client: [
+      {
+        fr: "La Cimade Lyon",
+      },
+      {
+        en: "La Cimade Lyon",
+      },
+    ],
+    languages: ["Adobe InDesign"],
+    description: [
+      {
+        fr: "Création du design du livret de présentation du festival Migrant'Scène pour l'association La Cimade à Lyon",
+      },
+      {
+        en: "Building a to-do list management application. The application is responsive and works on mobile and tablet devices.",
+      },
+    ],
+    picture: "/images/projects/MSLyon.jpg",
+  },
+  {
+    title: "Livret Etat-civil",
+    categories: ["Graphisme"],
+    date: 2018,
+    client: [
+      {
+        fr: "ONG Caritas Maroc",
+      },
+      {
+        en: "Caritas Maroc NGO",
+      },
+    ],
+    languages: ["Adobe InDesign"],
+    description: [
+      {
+        fr: "Création du design et mise en page du livret d'information sur l'Etat civil au Maroc à destination des personnes exilées",
+      },
+      {
+        en: "Building a to-do list management application. The application is responsive and works on mobile and tablet devices.",
+      },
+    ],
+    picture: "/images/projects/LivretEC.jpg",
+  },
+  {
+    title: "Flyer santé",
+    categories: ["Graphisme"],
+    date: 2018,
+    client: [
+      {
+        fr: "ONG Caritas Maroc",
+      },
+      {
+        en: "Caritas Maroc NGO",
+      },
+    ],
+    languages: ["Adobe InDesign"],
+    description: [
+      {
+        fr: "Création du contenu et du design, mise en page du flyer d'information sur le système de soin au Maroc à destination des personnes exilées",
+      },
+      {
+        en: "Building a to-do list management application. The application is responsive and works on mobile and tablet devices.",
+      },
+    ],
+    picture: "/images/projects/FlySante.jpg",
+  },
+  {
+    title: "Livret PNPM",
+    categories: ["Graphisme"],
+    date: 2018,
+    client: [
+      {
+        fr: "ONG Plateforme Nationale Protection Migrants",
+      },
+      {
+        en: "Caritas Maroc NGO",
+      },
+    ],
+    languages: ["Adobe InDesign"],
+    description: [
+      {
+        fr: "Création du design et mise en page du livret de présentation de la plateforme PNPM au Maroc",
+      },
+      {
+        en: "Building a to-do list management application. The application is responsive and works on mobile and tablet devices.",
+      },
+    ],
+    picture: "/images/projects/Pnpm.jpg",
+  },
+  {
+    title: "Rapport annuel MS Toulouse",
+    categories: ["Graphisme"],
+    date: 2019,
+    client: [
+      {
+        fr: "La Cimade Toulouse",
+      },
+      {
+        en: "Caritas Maroc NGO",
+      },
+    ],
+    languages: ["Adobe InDesign"],
+    description: [
+      {
+        fr: "Création du design et mise en page du rapport annuel du festival Migrant'Scène pour l'association La Cimade sur la région Sud-Ouest",
+      },
+      {
+        en: "Building a to-do list management application. The application is responsive and works on mobile and tablet devices.",
+      },
+    ],
+    picture: "/images/projects/RapportTls.jpg",
   },
 ];

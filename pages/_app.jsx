@@ -6,11 +6,11 @@ import AppContext from "/utils/context";
 import Container from "/components/layout/Container";
 import Header from "/components/layout/Header";
 import CategoriesBar from "../components/layout/CategoriesBar";
+import AboutMe from "/components/layout/AboutMe";
 
 import "/styles/global.scss";
 
 const App = ({ Component, pageProps }) => {
-
   return (
     <>
       <Head>
@@ -30,12 +30,13 @@ const App = ({ Component, pageProps }) => {
             <Header />
             <div
               id="app"
-              className="flex flex-col lg:flex-row content-start min-h-max w-full gap-10 gap-y-6 mt-10 md:mt-[180px] justify-center m-auto"
+              className="flex flex-col lg:flex-row content-start min-h-max w-full gap-10 gap-y-6  mt-[120px] justify-center m-auto"
             >
               <div
                 id="panel"
                 className="flex flex-col lg:basis-full gap-y-10 md:gap-y-6"
               >
+                <AboutMe />
                 <CategoriesBar />
                 <main className="flex flex-col px-2 ">
                   <Component {...pageProps} />

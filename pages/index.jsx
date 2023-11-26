@@ -17,9 +17,12 @@ export default function Home() {
         )
       : portfolioData;
 
+  // Triez les projets par date de manière décroissante
+  const sortedProjects = filteredProjects.sort((a, b) => b.date - a.date);
+
   return (
-    <div className="grid w-full h-full grid-cols-3 gap-8">
-      {filteredProjects.map((project) => (
+    <div className="grid w-full h-full gap-8 xl:grid-cols-3 md:grid-cols-2">
+      {sortedProjects.map((project) => (
         <ProjectCard key={project.id} project={project} />
       ))}
     </div>
