@@ -1,27 +1,22 @@
-// CategoriesBar.js
 import { useCategoryFilter } from "/utils/context/CategoryFilter";
 import portfolioData from "/data/portfolio";
+import { useTranslation } from "react-i18next";
 
 export default function CategoriesBar() {
   const { selectedCategories, setSelectedCategories } = useCategoryFilter();
+  const { i18n } = useTranslation("pages");
 
   const categories = Array.from(
-    new Set(portfolioData.flatMap((project) => project.categories))
+    new Set(
+      portfolioData.flatMap(
+        (project) =>
+          (project[i18n.language] && project[i18n.language].categories) || []
+      )
+    )
   );
 
   const toggleCategory = (category) => {
-    setSelectedCategories((prevSelectedCategories) => {
-      if (
-        prevSelectedCategories.length === 1 &&
-        prevSelectedCategories[0] === category
-      ) {
-        // Si la catégorie est déjà la seule catégorie sélectionnée, désélectionnez-la
-        return [];
-      } else {
-        // Sinon, activez/désactivez uniquement la catégorie actuelle
-        return [category];
-      }
-    });
+    setSelectedCategories([category]);
   };
 
   return (
@@ -35,7 +30,7 @@ export default function CategoriesBar() {
               : "text-slate-600 dark:text-slate-400"
           }`}
         >
-          All
+          Tout
         </button>
         {categories.map((category) => (
           <button

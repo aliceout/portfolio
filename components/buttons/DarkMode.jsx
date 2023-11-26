@@ -43,7 +43,7 @@ export default function DarkMode() {
           className="flex p-2 duration-300 rounded-full bg-slate-900/70"
         >
           <BsFillMoonStarsFill className="text-yellow-100" />
-          <span class="sr-only">{t("lightMode")}</span>
+          <span className="sr-only">{t("lightMode")}</span>
         </button>
       ) : (
         <button
@@ -54,7 +54,7 @@ export default function DarkMode() {
           className="flex p-2 duration-300 bg-white rounded-full"
         >
           <MdSunny className="text-yellow-400 " />
-          <span class="sr-only">{t("darkMode")}</span>
+          <span className="sr-only">{t("darkMode")}</span>
         </button>
       )}
     </>

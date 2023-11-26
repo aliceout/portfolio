@@ -3,27 +3,32 @@ import { useTranslation } from "react-i18next";
 
 import ModalBase from "/components/Modals//ModalBase";
 import { useIcons } from "/utils/context/IconsContext";
-import { filterDataByLanguage } from "/utils/tools/languages";
 
 // function removeHttps(url) {
 //   return url.replace("https://", "");
 // }
 
-export default function ProjectModal({ project, isOpenModal, setIsOpenModal }) {
+export default function ProjectModal({
+  project,
+  isOpenModal,
+  setIsOpenModal,
+  currentLanguage,
+}) {
+  console.log("currentLanguage", currentLanguage);
   const ReactIcons = useIcons();
   const SlClose = ReactIcons["SlClose"];
-  const { t, i18n } = useTranslation("pages");
+  const { i18n } = useTranslation("pages");
 
   const tableItems = [
     {
       icon: "BsPersonCircle",
       title: "Client :",
-      value: filterDataByLanguage(project.client, i18n.language),
+      value: project[currentLanguage].client,
     },
     {
       icon: "BiSolidCategory",
       title: "Catégories :",
-      value: project.categories,
+      value: project[currentLanguage].categories,
     },
     {
       icon: "FaRegCalendarAlt",
@@ -61,7 +66,7 @@ export default function ProjectModal({ project, isOpenModal, setIsOpenModal }) {
       <div className="flex flex-col flex-1 p-4 gap-y-6">
         <div>
           <p className="text-2xl font-bold text-center uppercase text-primary dark:text-secondary">
-            {project.title}
+            {project[currentLanguage].title}
           </p>
         </div>
         <ul className="grid grid-cols-2 gap-2 text-lg text-slate-900 dark:text-slate-300">
@@ -69,7 +74,7 @@ export default function ProjectModal({ project, isOpenModal, setIsOpenModal }) {
         </ul>
         <div>
           <p className="text-slate-900 dark:text-slate-300">
-            {filterDataByLanguage(project.description, i18n.language)}
+            {project[currentLanguage].description}
           </p>
         </div>
         <div className="flex justify-center w-full min-w-full rounded-xl">
@@ -78,7 +83,7 @@ export default function ProjectModal({ project, isOpenModal, setIsOpenModal }) {
             width={1000}
             height={1000}
             className="rounded-xl"
-            alt={project.title}
+            alt={project[currentLanguage].title}
           />
         </div>
       </div>
