@@ -1,0 +1,10 @@
+{
+  "fonction": "Développeuse web",
+  "contacts": {
+    "element": "Envoyer un message",
+    "skype": "Appeler via Skype",
+    "email": "Envoyer un email"
+  },
+  "downloadBtn": "Télecharger CV",
+  "contactBtn": "Me contacter"
+}

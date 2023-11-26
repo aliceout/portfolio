@@ -1,0 +1,26 @@
+{
+  "home": {
+    "h1": "En deux mots"
+  },
+  "works": {
+    "h1": "Experiences professionelles "
+  },
+  "studies": {
+    "h1": "Formations"
+  },
+  "portfolio": {
+    "h1": "Portfolio",
+    "btn" : {
+      "preview" : "Aperçu"
+    }
+  },
+  "skills": {
+    "h1": "Compétences",
+    "certifications": {
+      "h2": "Certifications"
+    },
+    "languages": {
+      "h2": "Niveau linguistique"
+    }
+  }
+}

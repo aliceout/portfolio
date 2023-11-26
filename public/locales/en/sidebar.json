@@ -1,0 +1,10 @@
+{
+  "fonction": "Web developer",
+  "contacts": {
+    "element": "Send a message",
+    "skype": "Call via Skype",
+    "email": "Send an email"
+  },
+  "downloadBtn": "Download CV",
+  "contactBtn": "Contact Me"
+}
