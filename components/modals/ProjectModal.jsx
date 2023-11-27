@@ -1,8 +1,9 @@
+import Link from "next/link";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
-
-import ModalBase from "/components/Modals//ModalBase";
 import { useIcons } from "/utils/context/IconsContext";
+import { FaGithub } from "react-icons/fa";
+import { GrOverview } from "react-icons/gr";
+import ModalBase from "/components/Modals//ModalBase";
 
 export default function ProjectModal({
   project,
@@ -26,7 +27,6 @@ export default function ProjectModal({
 
   const ReactIcons = useIcons();
   const SlClose = ReactIcons["SlClose"];
-  const { i18n } = useTranslation("pages");
 
   const tableInfosItems = [
     {
@@ -47,19 +47,6 @@ export default function ProjectModal({
     { icon: "IoIosCode", title: "Outils :", value: project.languages },
   ];
 
-  const tableLinksItems = [
-    {
-      icon: "FaGithub",
-      title: "Repository :",
-      value: changeUrlGithub(project.repository),
-    },
-    {
-      icon: "GrOverview",
-      title: "Aperçu :",
-      value: changeUrlPreview(project.url),
-    },
-  ];
-
   const tableInfos = tableInfosItems.map((item) => {
     const IconComponent = ReactIcons[item.icon];
     return (
@@ -70,19 +57,6 @@ export default function ProjectModal({
           <span className="font-semibold">{item.value}</span>
         </span>
       </li>
-    );
-  });
-
-  const tableLinks = tableLinksItems.map((item) => {
-    const IconComponent = ReactIcons[item.icon];
-    return (
-      <Link href key={item.title} className="flex items-center gap-x-3">
-        <IconComponent className="text-lg font-semibold text-slate-900 dark:text-slate-300" />
-        <span className="flex font-medium">
-          {item.title} &nbsp;
-          <span className="font-semibold">{item.value}</span>
-        </span>
-      </Link>
     );
   });
 
@@ -105,8 +79,31 @@ export default function ProjectModal({
         </div>
         <ul className="grid grid-cols-2 gap-2 text-lg text-slate-900 dark:text-slate-300">
           {tableInfos}
-          {tableLinks}
-          {/* {project.url && { tableLinks }} */}
+          {project.repository && (
+            <Link
+              href={project.repository}
+              className="flex items-center gap-x-3"
+            >
+              <FaGithub className="text-lg font-semibold text-slate-900 dark:text-slate-300" />
+              <span className="flex font-medium">
+                Github &nbsp;
+                <span className="font-semibold">
+                  {changeUrlGithub(project.repository)}
+                </span>
+              </span>
+            </Link>
+          )}
+          {project.url && (
+            <Link href={project.url} className="flex items-center gap-x-3">
+              <GrOverview className="text-lg font-semibold text-slate-900 dark:text-slate-300" />
+              <span className="flex font-medium">
+                Aperçu &nbsp;
+                <span className="font-semibold">
+                  {changeUrlPreview(project.url)}
+                </span>
+              </span>
+            </Link>
+          )}
         </ul>
         <div>
           <p className="text-slate-900 dark:text-slate-300">
