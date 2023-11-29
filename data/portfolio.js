@@ -6,7 +6,7 @@ module.exports = [
       categories: ["WebApp"],
 
       description:
-        "Projet de numérisation des guides de l'association Watizat. L'application permet de consulter les guides, de les filtrer par catégorie, et d'éditer les données (backoffice). Les guides sont également géolocalisés sur une carte. L'application est responsive et fonctionne sur mobile et tablette",
+        "Projet de numérisation des guides de l'association Watizat. L'application permet de consulter les guides, de les filtrer par catégories, et d'éditer les données (backoffice). Les guides sont également géolocalisés sur une carte. L'application est responsive et fonctionne sur desktop, mobile et tablette",
     },
     en: {
       title: "Web guide",
@@ -29,7 +29,7 @@ module.exports = [
       categories: ["WebApp"],
 
       description:
-        "Reconstruction d'une application de collecte et de traitement des données des personnes exilées accueillies, pour le compte de l'ONG Caritas au Maroc. \n\n Modélisation de l'interface, et construction du front avant passage de relai à un prestataire",
+        "Reconstruction d'une application de collecte et de traitement des données des personnes exilées accueillies, pour le compte de l'ONG Caritas au Maroc. \n\n Modélisation de l'interface, et construction du front avant passage de relais à un prestataire",
     },
     en: {
       title: "Migrappi",
@@ -75,7 +75,7 @@ module.exports = [
       categories: ["WebApp"],
 
       description:
-        "Applicaiton de conversion et d'affichage d'historique des cours de changes.L'application est responsive et fonctionne sur mobile et tablette",
+        "Application de conversion et affichage d'historique des cours de changes. L'application est responsive et fonctionne sur desktop mobile et tablette",
     },
     en: {
       title: "Currencies converter",
@@ -83,7 +83,7 @@ module.exports = [
       categories: ["WebApp"],
 
       description:
-        "Application for converting and displaying historical exchange rates. The application is responsive and works on mobiles and tablets",
+        "Conversion and historical exchange rate display application. The application is responsive and works on desktop, mobile and tablet devices.",
     },
     date: 2023,
     languages: ["JavaScript"],
