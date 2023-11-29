@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useIcons } from "/utils/context/IconsContext";
 import { FaGithub } from "react-icons/fa";
 import { GrOverview } from "react-icons/gr";
-import ModalBase from "/components/Modals/ModalBase";
+import ModalBase from "./ModalBase";
 
 export default function ProjectModal({
   project,
